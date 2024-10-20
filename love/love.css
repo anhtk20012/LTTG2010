@@ -748,6 +748,9 @@ body{
             transform: translateX(20px);
         }
     }
+    .boxHandsInput{
+        width: 70%;
+    }
     .boxLetter .formLetter{
         width: 360px;
         height: 280px;
