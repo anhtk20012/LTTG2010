@@ -10,7 +10,12 @@ var heartItem2 = document.querySelector(".heartItem.item2")
 var heartItem3 = document.querySelector(".heartItem.item3")
 var count = 0;
 var percentWidth = 0;
-var heartLeft = -3.2;
+if (parseFloat(window.getComputedStyle(heartBox).getPropertyValue('left')) == -9.6){
+    var heartLeft = -4.2;
+}
+else{
+    var heartLeft = -3.2;
+}
 var progressLoad = setInterval(progressInterva,100)
 
 button.addEventListener("click", function(){
@@ -18,7 +23,7 @@ button.addEventListener("click", function(){
     setTimeout(()=>{
         button.style.transform = "scale(1)";
         window.location.href = "./love/love.html"
-    },200)
+    },300)
 })
 
 function progressInterva(){
@@ -28,6 +33,10 @@ function progressInterva(){
         percent.style.letterSpacing = "1px";
         textBox.style.transform = "scale(1.3)"
         heartItem3.style.animation = "1s heartScale forwards"
+        setTimeout(()=>{
+            heartBox.style.transition = 'opacity 1s ease';
+            heartBox.style.opacity = '0';
+        },400);
         setTimeout(()=>{
             textBox.style.transform = "scale(0)"
         },400)
@@ -52,6 +61,7 @@ function progressInterva(){
         setTimeout(()=>{
             cursor.style.opacity = "1";
         },3000)
+
     }
     else{
         if(count == 10){

@@ -20,10 +20,22 @@
             <div class="boxSlider">
                     <div class="listSlider">
                         <div class="slider">
-                            <img src="../images/love1.jfif" alt="">
+                            <img src="../images/pic_1.jpg" alt="">
                         </div>
                         <div class="slider">
-                            <img src="../images/love2.png" alt="">
+                            <img src="../images/pic_2.jpg" alt="">
+                        </div>
+                        <div class="slider">
+                            <img src="../images/pic_3.png" alt="">
+                        </div>
+                        <div class="slider">
+                            <img src="../images/pic_4.png" alt="">
+                        </div>
+                        <div class="slider">
+                            <img src="../images/pic_5.png" alt="">
+                        </div>
+                        <div class="slider">
+                            <img src="../images/pic_6.png" alt="">
                         </div>
                     </div>
                 <div class="left">
@@ -37,7 +49,7 @@
                 <div class="handsCatImgInput">
                     <img src="../images/handsCat.png" alt="">
                 </div>
-                <input type="text" id="inputField" placeholder="Nhập tên..." readonly>
+                <input type="text" id="inputField" placeholder="Người gửi: Trọng Ánh" readonly>
             </div>
             <div class="buttonLove">
                 <div class="cricleBtn"></div>
@@ -106,9 +118,9 @@
                     <div class="mewmew1">
                         <img src="../images/mewmew.gif" alt="">
                     </div>
-                    <div class="mewmew2">
+                    <!-- <div class="mewmew2">
                         <img src="../images/mewmew.gif" alt="">
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="before"></div>
@@ -170,7 +182,7 @@
     }
 
     const inputField = document.getElementById('inputField');
-    const textToType = "Lê Thị Trường Giang";
+    const textToType = "Người nhận: Trường Giang";
     const typingSpeed = 100;
 
     let charIndex = 0;
@@ -240,7 +252,7 @@
 
     let indexTextContent = 0;
     let textLetterContent = document.querySelector('.contentLetter');
-    const textLetterP = "1 tuần có 7 ngày. 1 ngày có 24 giờ. 1 giờ có 60 phút. 1 phút có 60 giây. Không có một ngày hoặc giờ mà tôi không nhớ bạn. Không có giây phút nào mà anh không nghĩ đến cậu. Tâm hồn và trái tim tôi tràn ngập bạn. Nhớ và yêu em nhiều lắm.";
+    const textLetterP = "Nhân ngày 20/10, anh chúc vợ iu của anh luôn có nhiều sức khỏe, hạnh phúc và mãi là người bạn đồng hành không thể thiếu trong hành trình phía trước của bé Đin này. Anh đôi chút ngáo ngáo và hơi nhây, nhưng anh vẫn sẽ cố gắng mãi mãi bên em. Cảm ơn em vì đã luôn yêu thương và cùng anh đi qua mọi thử thách.";
     let timoutTextLetterContent;
     function textCharLetterContent(){
         if (indexTextContent < textLetterP.length) {
@@ -261,7 +273,7 @@
             textCharLetterContent();
             }, 100)
     }
-    //end 
+
     document.querySelector(".boxSlider .right").addEventListener("click", function(){
         var slider = document.querySelectorAll(".slider")
         document.querySelector(".listSlider").appendChild(slider[0])
@@ -279,15 +291,15 @@
             document.querySelector("body").prepend(letters)
             let left = Math.floor(Math.random() * 100);
             let rotate = Math.floor(Math.random() * 360);
-            letters.style.left = left + "%";
+            letters.style.left = left-5 + "%";
             letters.style.top = "-10%";
             letters.style.transform = `rotate(${rotate}deg)`;
             setTimeout(()=>{
-                letters.style.top = "100%";
+                letters.style.top = "120%";
             },1000)
             setTimeout(()=>{
                 letters.remove()
-            },11000)
+            },10000)
             document.querySelectorAll(".letters").forEach((item)=>{
                 item.addEventListener("click", function(){
                     clearInterval(timeout)
